@@ -98,8 +98,8 @@ function App() {
   }
   
   // generate random values to display the apps on the screen
-  const percent20: number = windowSize.current[0]/100*20
-  const percent50: number = windowSize.current[1]/100*50
+  const percentX: number = windowSize.current[0]/100*40
+  const percentY: number = windowSize.current[1]/100*50
 
   // function to verify mobile devices
   const [isMobile, setIsMobile] = useState<boolean>(false)
@@ -116,8 +116,8 @@ function App() {
         <main>
           <MoveWindow
           isMobile={isMobile} 
-          initialX={getRandomArbitrary(50, windowSize.current[0]- percent20)} //generate a random initialX to the window
-          initialY={getRandomArbitrary(50, windowSize.current[1]- percent50)} //generate a random initialY to the window
+          initialX={getRandomArbitrary(50, windowSize.current[0]- percentX)} //generate a random initialX to the window
+          initialY={getRandomArbitrary(50, windowSize.current[1]- percentY)} //generate a random initialY to the window
           width={width} //set the width of the draggable area
           height={height}
           setWidth={setWidth}
@@ -130,8 +130,8 @@ function App() {
           />
           <MoveWindow
           isMobile={isMobile} 
-          initialX={getRandomArbitrary(50, windowSize.current[0]- percent20)} 
-          initialY={getRandomArbitrary(50, windowSize.current[1]- percent50)} 
+          initialX={getRandomArbitrary(50, windowSize.current[0]- percentX)} 
+          initialY={getRandomArbitrary(50, windowSize.current[1]- percentY)} 
           width={width}
           height={height}
           setWidth={setWidth}
@@ -144,8 +144,8 @@ function App() {
           />
           <MoveWindow
           isMobile={isMobile} 
-          initialX={getRandomArbitrary(50, windowSize.current[0]- percent20)} 
-          initialY={getRandomArbitrary(50, windowSize.current[1]- percent50)} 
+          initialX={getRandomArbitrary(50, windowSize.current[0]- percentX)} 
+          initialY={getRandomArbitrary(50, windowSize.current[1]- percentY)} 
           width={finderWidth}
           height={height}
           setWidth={setFinderWidth}
@@ -158,8 +158,8 @@ function App() {
           />
           <MoveWindow
           isMobile={isMobile} 
-          initialX={getRandomArbitrary(50, windowSize.current[0]- percent20)} //generate a random initialX to the window
-          initialY={getRandomArbitrary(50, windowSize.current[1]- percent50)} //generate a random initialY to the window
+          initialX={getRandomArbitrary(50, windowSize.current[0]- percentX)} //generate a random initialX to the window
+          initialY={getRandomArbitrary(50, windowSize.current[1]- percentY)} //generate a random initialY to the window
           width={width} //set the width of the draggable area
           height={height}
           setWidth={setWidth}
