@@ -166,7 +166,7 @@ function showContent(value: string){
                         {/* image inserted in styled component */}
                     </S.Folder>
                 </a>
-                <a href="https://space-tourism-website.netlify.app/" target="_blank">
+                <a href="https://markoscomk.github.io/dictionary-web-app/" target="_blank">
                     <S.Folder>
                         {/* image inserted in styled component */}
                     </S.Folder>

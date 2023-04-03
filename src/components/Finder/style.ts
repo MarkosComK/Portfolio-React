@@ -3,6 +3,7 @@ import typerSpace from './images/typerspace.jpg'
 import jsCalculator from './images/javascript-calculator.jpg'
 import pomodoro from './images/pomodoro.jpg'
 import spaceTourismWebsite from './images/space-tourism-website.jpg'
+import dictionaryWebApp from "./images/dictionary-web-app.jpg"
 import github from './images/github.jpg'
 
 import * as A from "../styles/animations"
@@ -310,7 +311,7 @@ export const Work = styled.div`
     }
     & a:nth-child(4){
         animation: ${A.ShowContent} 2s ease;
-        background-image: url(${spaceTourismWebsite});
+        background-image: url(${dictionaryWebApp});
         grid-column: span 2;
         grid-row: span 2;
     }
