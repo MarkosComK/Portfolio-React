@@ -5,6 +5,8 @@ import pomodoro from './images/pomodoro.jpg'
 import spaceTourismWebsite from './images/space-tourism-website.jpg'
 import github from './images/github.jpg'
 
+import * as A from "./animation"
+
 interface Props {
     display: boolean,
     zIndex: number,
@@ -215,6 +217,7 @@ export const FinderMain = styled.main`
     }
 `
 export const ProfileWrap = styled.div`
+    animation: ${A.showContent} 1s ease;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -227,6 +230,7 @@ export const ProfileWrap = styled.div`
 `
 
 export const TextWrap = styled.div`
+    animation: ${A.showContent} 3s ease;
     text-align: center;
     p:nth-child(1){
         margin-top: 40px;
@@ -268,6 +272,7 @@ export const Icons = styled.div`
 `
 
 export const Work = styled.div`
+    animation: ${A.showContent} 1s ease;
     width: min(700px, 100%);
     margin: 0 auto;
 
@@ -287,24 +292,29 @@ export const Work = styled.div`
         }
     }
     & a:nth-child(1){
+        animation: ${A.showContent} 1s ease;
         background-image: url(${typerSpace});
         grid-row: 1 / span 2;
     }
     & a:nth-child(2){
+        animation: ${A.showContent} 1.5s ease;
         background-image: url(${jsCalculator});
         grid-column: span 2;
     }
     & a:nth-child(3){
+        animation: ${A.showContent} 1.7s ease;
         background-image: url(${pomodoro});
         grid-column: span 2;
         grid-row: span 2;
     }
     & a:nth-child(4){
+        animation: ${A.showContent} 2s ease;
         background-image: url(${spaceTourismWebsite});
         grid-column: span 2;
         grid-row: span 2;
     }
     & a:nth-child(5){
+        animation: ${A.showContent} 2.2s ease;
         background-image: url(${github});
         grid-column: span 2;
         grid-row: span 2;
