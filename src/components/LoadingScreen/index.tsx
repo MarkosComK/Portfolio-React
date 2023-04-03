@@ -2,12 +2,12 @@ import * as S from './style'
 import logo from './favicon.png'
 
 interface Props {
-    zIndex: boolean
+    display: boolean
 }
 
-function LoadingScreen({zIndex}: Props) {
+function LoadingScreen({display}: Props) {
     return (
-        <S.LoadingScreen display={zIndex}>
+        <S.LoadingScreen display={display}>
             <i><img src={logo} alt="" /></i>
             <div></div>
         </S.LoadingScreen>
