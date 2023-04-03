@@ -75,4 +75,15 @@ export const LoadingScreen = styled.div<Props>`
             width: 100%;
         }
     }
+    @media only screen and (max-width: 600px) {
+        i{
+            img{
+                width: 110px;
+                height: 130px;
+            }
+        }
+        div{
+            width: calc(100% - 40px);
+        }
+    }
 `
