@@ -6,15 +6,27 @@ import Calculator from "./components/Calculator";
 import Todo from "./components/Todo";
 import Finder from './components/Finder'
 import MoveWindow from "./components/MoveWindow";
-import { SmallDevices } from "./style";
 import Weather from "./components/Weather";
 import TopBar from "./components/TopBar";
 import StaticBG from './components/TopBar/backgrounds/background-main.jpg'
 import LoadingScreen from "./components/LoadingScreen";
 
 function verifyIsMobile() {
-  return navigator.maxTouchPoints > 0 && /Android | iPhone/i.test(navigator.userAgent)
+  const toMatch = [
+    /Android/i,
+    /webOS/i,
+    /iPhone/i,
+    /iPad/i,
+    /iPod/i,
+    /BlackBerry/i,
+    /Windows Phone/i
+  ]
+
+  return toMatch.some((toMatchItem) => {
+      return navigator.userAgent.match(toMatchItem)
+  })
 }
+
 
 function getRandomArbitrary(min: number, max: number) {
   if(!verifyIsMobile()){
