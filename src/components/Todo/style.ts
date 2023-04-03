@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import * as A from "../styles/animations"
+
 
 interface Props {
     display: boolean,
@@ -7,6 +9,7 @@ interface Props {
 }
 
 export const Todo = styled.div<Props>`
+    animation: ${A.Screen} 0.5s ease;
     display: ${props => props.display ? "grid" : "none"};
     grid-template-columns: 1fr;
     grid-template-rows: 38px 1fr 38px;

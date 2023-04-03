@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import * as A from "../styles/animations"
 
 interface Props {
     display: boolean,
@@ -7,6 +8,7 @@ interface Props {
 }
 
 export const Calculator = styled.div<Props>`
+    animation: ${A.Screen} 0.5s ease;
     display: ${props => props.display ? "inline" :  "none"};
     position: absolute;
 

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import * as A from "../styles/animations"
+
 
 interface Props {
     display: boolean,
@@ -7,6 +9,7 @@ interface Props {
 }
 
 export const Weather = styled.div<Props>`
+    animation: ${A.Screen} 0.5s ease;
     display: ${props => props.display ? "grid" : "none"};
     width: ${props => props.isMobile ? `${100}vw` : `${300}px`};
     height: ${props => props.isMobile ? `${70}vh` : `${500}px`};
