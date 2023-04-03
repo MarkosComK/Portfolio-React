@@ -192,6 +192,7 @@ export const FolderSize = styled.div`
 `
 
 export const FinderMain = styled.main`
+    width: 100%;
     overflow: auto;
     padding: 20px;
     text-align: center;
@@ -267,7 +268,7 @@ export const Icons = styled.div`
 `
 
 export const Work = styled.div`
-    width: 700px;
+    width: min(700px, 100%);
     margin: 0 auto;
 
     display: grid;

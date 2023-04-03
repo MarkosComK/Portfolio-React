@@ -98,7 +98,7 @@ function App() {
   }
   
   // generate random values to display the apps on the screen
-  const percentX: number = windowSize.current[0]/100*40
+  const percentX: number = windowSize.current[0]/100*20
   const percentY: number = windowSize.current[1]/100*50
 
   // function to verify mobile devices
