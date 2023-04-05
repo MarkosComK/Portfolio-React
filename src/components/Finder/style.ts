@@ -2,7 +2,6 @@ import styled from "styled-components";
 import typerSpace from './images/typerspace.jpg'
 import jsCalculator from './images/javascript-calculator.jpg'
 import pomodoro from './images/pomodoro.jpg'
-import spaceTourismWebsite from './images/space-tourism-website.jpg'
 import dictionaryWebApp from "./images/dictionary-web-app.jpg"
 import github from './images/github.jpg'
 
