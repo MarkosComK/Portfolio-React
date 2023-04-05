@@ -297,37 +297,82 @@ export const Work = styled.div`
         animation: ${A.ShowContent} 1s ease;
         background-image: url(${typerSpace});
         grid-row: 1 / span 2;
+        position: relative;
+        /* Hover necessary to display the icons */
+        &:hover{
+            div{
+                display: inline;
+            }
+        }
     }
     & a:nth-child(2){
         animation: ${A.ShowContent} 1.5s ease;
         background-image: url(${jsCalculator});
         grid-column: span 2;
+        &:hover{
+            div{
+                display: inline;
+            }
+        }
     }
     & a:nth-child(3){
         animation: ${A.ShowContent} 1.7s ease;
         background-image: url(${pomodoro});
         grid-column: span 2;
         grid-row: span 2;
+        &:hover{
+            div{
+                display: inline;
+            }
+        }
     }
     & a:nth-child(4){
         animation: ${A.ShowContent} 2s ease;
         background-image: url(${dictionaryWebApp});
         grid-column: span 2;
         grid-row: span 2;
+        &:hover{
+            div{
+                display: inline;
+            }
+        }
     }
     & a:nth-child(5){
         animation: ${A.ShowContent} 2.2s ease;
         background-image: url(${github});
         grid-column: span 2;
         grid-row: span 2;
+        &:hover{
+            div{
+                display: inline;
+            }
+        }
     }
     & a:nth-child(7), 
       a:nth-child(8),
       a:nth-child(9){
         grid-row: span 2;
+        &:hover{
+            div{
+                display: inline;
+            }
+        }
     }
 `
 
 export const Folder = styled.div`
-    background-image: url("https://c4.wallpaperflare.com/wallpaper/764/505/66/baby-groot-4k-hd-superheroes-wallpaper-preview.jpg");
+
+`
+
+export const Svgs = styled.div`
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    svg{
+        width: 30px;
+        height: 30px;
+    }
 `
