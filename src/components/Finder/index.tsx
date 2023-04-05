@@ -17,9 +17,6 @@ import driveIcon from './finder-icons/drive.png'
 import profileImg from './images/me-art.png'
 
 // work images
-import jsCalculator from './images/javascript-calculator.jpg'
-import reactFolder from './finder-icons/react-folder.png'
-import githubFolder from './finder-icons/github-folder.png'
 
 interface Props {
     display: boolean,
