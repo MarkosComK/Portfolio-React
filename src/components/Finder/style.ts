@@ -359,6 +359,20 @@ export const Work = styled.div`
     }
 `
 
+export const Dowloads = styled.section`
+
+    ul{
+        li{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 4px 8px;
+            background-color: var(--border-color);
+            border-radius: 8px;
+        }
+    }
+`
+
 export const Folder = styled.div`
 
 `

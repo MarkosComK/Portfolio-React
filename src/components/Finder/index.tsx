@@ -11,6 +11,7 @@ import desktopIcon from './finder-icons/desktop.png'
 import documentsIcon from './finder-icons/documents.png'
 import downloadsIcon from './finder-icons/downloads.png'
 import driveIcon from './finder-icons/drive.png'
+import resume from "./assets/markos-resume.pdf"
 
 
 // about images
@@ -55,7 +56,7 @@ function Finder({display, zIndex, handleChangeDisplay, isMobile}: Props) {
                     <ul >
                         <li onClick={() => setContent('about')}><img src={applicationIcon} alt="" />About</li>
                         <li onClick={() => setContent('work')}><img src={imagesIcon} alt="" />Work</li>
-                        <li><img src={downloadsIcon} alt="" />Downloads</li>
+                        <li onClick={() => setContent("downloads")}><img src={downloadsIcon} alt="" />Downloads</li>
                         <li><img src={documentsIcon} alt="" />Documents</li>
                         <li><img src={airdropIcon} alt="" />AirDrop</li>
                         <li><img src={desktopIcon} alt="" />Desktop</li>
@@ -204,7 +205,11 @@ function showContent(value: string){
             break
         case "downloads":
             return (
-                <h1>WORKING MERMAO</h1>
+                <S.Dowloads>
+                    <ul>
+                        <li><div>markos-resume.pdf</div> <div><a href={resume}>dowload</a></div></li>
+                    </ul>
+                </S.Dowloads>
             )
             break
         default:
