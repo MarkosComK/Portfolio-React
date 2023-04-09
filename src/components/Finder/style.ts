@@ -362,13 +362,29 @@ export const Work = styled.div`
 export const Dowloads = styled.section`
 
     ul{
+        a{
+            text-decoration: none;
+            color: var(--light-blue);
+        }
         li{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             padding: 4px 8px;
+            margin: 4px 0;
             background-color: var(--border-color);
             border-radius: 8px;
+            a{
+                text-decoration: none;
+                color: var(--light-blue);
+            }
+        }
+
+        li:nth-child(1){
+            animation: ${A.ShowContent} 1s ease;
+        }
+        li:nth-child(2){
+            animation: ${A.ShowContent} 1.5s ease
         }
     }
 `

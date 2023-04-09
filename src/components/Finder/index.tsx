@@ -11,13 +11,19 @@ import desktopIcon from './finder-icons/desktop.png'
 import documentsIcon from './finder-icons/documents.png'
 import downloadsIcon from './finder-icons/downloads.png'
 import driveIcon from './finder-icons/drive.png'
-import resume from "./assets/markos-resume.pdf"
 
 
 // about images
 import profileImg from './images/me-art.png'
 
 // work images
+// imported in styles.ts
+
+
+//files in dowloads
+import resume from "./assets/markos-resume.pdf"
+import portfolioMd from "./assets/README.md"
+
 
 interface Props {
     display: boolean,
@@ -207,9 +213,24 @@ function showContent(value: string){
             return (
                 <S.Dowloads>
                     <ul>
-                        <li><div>markos-resume.pdf</div> <div><a href={resume}>dowload</a></div></li>
+                        <a target='_blank' href={resume}><li><div>markos-resume.pdf</div> <div><a target='_blank' href={resume} download>dowload</a></div></li></a>
                     </ul>
                 </S.Dowloads>
+            )
+            break
+        case "documents":
+            return (
+                <h2>Coming soon</h2>
+            )
+            break
+        case "airdrop":
+            return (
+                <h2>Coming soon</h2>
+            )
+            break
+        case "desktop":
+            return (
+                <h2>Coming soon</h2>
             )
             break
         default:
