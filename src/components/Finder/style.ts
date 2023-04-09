@@ -388,6 +388,11 @@ export const Dowloads = styled.section`
         }
     }
 `
+export const Coming = styled.div`
+h2{
+    animation: ${A.ShowContent} 1s ease;
+}
+`
 
 export const Folder = styled.div`
 

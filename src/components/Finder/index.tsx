@@ -63,9 +63,9 @@ function Finder({display, zIndex, handleChangeDisplay, isMobile}: Props) {
                         <li onClick={() => setContent('about')}><img src={applicationIcon} alt="" />About</li>
                         <li onClick={() => setContent('work')}><img src={imagesIcon} alt="" />Work</li>
                         <li onClick={() => setContent("downloads")}><img src={downloadsIcon} alt="" />Downloads</li>
-                        <li><img src={documentsIcon} alt="" />Documents</li>
-                        <li><img src={airdropIcon} alt="" />AirDrop</li>
-                        <li><img src={desktopIcon} alt="" />Desktop</li>
+                        <li onClick={() => setContent("documents")}><img src={documentsIcon} alt="" />Documents</li>
+                        <li onClick={() => setContent("airdrop")}><img src={airdropIcon} alt="" />AirDrop</li>
+                        <li onClick={() => setContent("desktop")}><img src={desktopIcon} alt="" />Desktop</li>
                     </ul>
                 </S.Favorites>
                 <S.Drive>
@@ -220,17 +220,23 @@ function showContent(value: string){
             break
         case "documents":
             return (
-                <h2>Coming soon</h2>
+                <S.Coming>
+                    <h2>Coming soon</h2>
+                </S.Coming>
             )
             break
         case "airdrop":
             return (
-                <h2>Coming soon</h2>
+                <S.Coming>
+                    <h2>Coming soon</h2>
+                </S.Coming>
             )
             break
         case "desktop":
             return (
-                <h2>Coming soon</h2>
+                <S.Coming>
+                    <h2>Coming soon</h2>
+                </S.Coming>
             )
             break
         default:
