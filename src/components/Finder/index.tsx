@@ -22,7 +22,6 @@ import profileImg from './images/me-art.png'
 
 //files in dowloads
 import resume from "./assets/markos-resume.pdf"
-import portfolioMd from "./assets/README.md"
 
 
 interface Props {

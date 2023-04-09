@@ -14,11 +14,12 @@ interface Props {
     handleTodoFocus: () => void,
     handleFinderFocus: () => void,
     handleWeatherFocus: () => void,
+    handleSafariFocus: () => void,
     isMobile: boolean
 }
 
 
-function TaskBar({handleChangeDisplay, handleCalculatorFocus, handleTodoFocus, handleFinderFocus, handleWeatherFocus, isMobile}: Props){
+function TaskBar({handleChangeDisplay, handleCalculatorFocus, handleTodoFocus, handleFinderFocus, handleWeatherFocus, handleSafariFocus, isMobile}: Props){
     const [load, setLoad] = useState(false)
 
     if(!isMobile){
@@ -74,6 +75,7 @@ function TaskBar({handleChangeDisplay, handleCalculatorFocus, handleTodoFocus, h
                   <img id="navbarIcon" 
                   src={safariIcon} 
                   alt="" 
+                  onClick={() => {handleChangeDisplay(5); handleSafariFocus()}}
                   />
                 </li>
                 <li>

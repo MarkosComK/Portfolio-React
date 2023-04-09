@@ -10,6 +10,7 @@ import Weather from "./components/Weather";
 import TopBar from "./components/TopBar";
 import StaticBG from './components/TopBar/backgrounds/background-main.jpg'
 import LoadingScreen from "./components/LoadingScreen";
+import Safari from "./components/Safari";
 
 function verifyIsMobile() {
   const toMatch = [
@@ -45,35 +46,36 @@ function App() {
       setLoading(false)
     }, 6000)
   }, [])
-
   // set the Apps display for true or false
   const [calculatorDisplay, setCalculatorDisplay] = useState<boolean>(false)
   const [todoDisplay, setTodoDisplay] = useState<boolean>(false)
   const [finderDisplay, setFinderDisplay] = useState<boolean>(false)
   const [weatherDisplay, setWeatherDisplay] = useState<boolean>(false)
+  const [safariDisplay, setSafariDisplay] = useState<boolean>(false)
   const windowSize = useRef([window.innerWidth, window.innerHeight])
-
+  
   // change Background
   const [background, setBackground] = useState(StaticBG)
   const [videoDisplay, setVideoDisplay] = useState(true)
-
+  
   const handleBgChange = (value: string) => {
     setVideoDisplay(false)
     setBackground(value)
   }
-
+  
   // set and change draggable area width
   const [width, setWidth] = useState(200)
   const [height, setHeight] = useState(35)
   const [finderWidth, setFinderWidth] = useState(830)
-
+  
   // set the zIndex of the app 
   const [calculatorIndex, setCalculatorIndex] = useState<number>(0)
   const [todoIndex, setTodoIndex] = useState<number>(0)
   const [finderIndex, setFinderIndex] = useState<number>(0)
   const [weatherIndex, setWeatherIndex] = useState<number>(0)
+  const [safariIndex, setSafariIndex] = useState<number>(0)
   const [zIndex, setZindex] = useState<number>(1)
-
+  
   const handleCalculatorFocus = () => {
     setCalculatorIndex(zIndex+1)
     setZindex(zIndex + 1)
@@ -88,6 +90,10 @@ function App() {
   }
   const handleWeatherFocus = () => {
     setWeatherIndex(zIndex)
+    setZindex(zIndex + 1)
+  }
+  const handleSafariFocus = () => {
+    setSafariIndex(zIndex)
     setZindex(zIndex + 1)
   }
 
@@ -105,6 +111,9 @@ function App() {
         break
       case 4:
         weatherDisplay ? setWeatherDisplay(false) : setWeatherDisplay(true)
+        break
+      case 5:
+        safariDisplay ? setSafariDisplay(false) : setSafariDisplay(true)
         break
     }
   }
@@ -182,6 +191,20 @@ function App() {
           <Weather isMobile={isMobile} display={weatherDisplay} zIndex={weatherIndex} handleChangeDisplay={handleChangeDisplay}/>
           }
           />
+          <MoveWindow
+          isMobile={isMobile} 
+          initialX={getRandomArbitrary(50, windowSize.current[0]- percentX)} //generate a random initialX to the window
+          initialY={getRandomArbitrary(50, windowSize.current[1]- percentY)} //generate a random initialY to the window
+          width={finderWidth} //set the width of the draggable area
+          height={height}
+          setWidth={setFinderWidth}
+          setHeight={setHeight}
+          handleFocus={handleSafariFocus}
+          zIndex={safariIndex}
+          children={
+          <Safari isMobile={isMobile} display={safariDisplay} zIndex={safariIndex} handleChangeDisplay={handleChangeDisplay}/>
+          }
+          />
         </main>
 
         <TaskBar 
@@ -190,6 +213,7 @@ function App() {
         handleTodoFocus={handleTodoFocus}
         handleFinderFocus={handleFinderFocus}
         handleWeatherFocus={handleWeatherFocus}
+        handleSafariFocus={handleSafariFocus}
         isMobile={isMobile}
         />
     </div>
