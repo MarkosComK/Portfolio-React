@@ -119,7 +119,7 @@ function App() {
   
   return (
     <div onLoad={() => setIsMobile(verifyIsMobile())}>
-      <LoadingScreen display={loading}/> 
+      <LoadingScreen display={false}/> 
         <VideoBackground isMobile={isMobile} display={videoDisplay} background={background}/>
       <GlobalStyle />
         <header>
