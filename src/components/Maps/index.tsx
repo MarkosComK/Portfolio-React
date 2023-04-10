@@ -12,7 +12,7 @@ interface Props {
 
 function Maps({display, zIndex, handleChangeDisplay, isMobile}: Props) {
   return (
-    <S.Maps display={display} zIndex={zIndex}>
+    <S.Maps display={display} zIndex={zIndex} isMobile={isMobile}>
         <S.Header isMobile={isMobile}>
             <B.RButton onClick={() => handleChangeDisplay(5)}></B.RButton>
             <div>

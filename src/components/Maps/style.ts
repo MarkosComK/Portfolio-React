@@ -2,8 +2,9 @@ import styled from "styled-components";
 import * as A from "../styles/animations"
 
 interface Props {
-    display: boolean
-    zIndex: number
+    display: boolean,
+    zIndex: number,
+    isMobile: boolean
 }
 
 export const Maps = styled.section<Props>`
@@ -13,7 +14,8 @@ export const Maps = styled.section<Props>`
     display: ${props => props.display ? `grid` : `none`};
     z-index: ${props => props.zIndex};
     border-radius: 14px;
-    width: 900px;
+    width: ${props => props.isMobile ? `${100}vw`: `${900}px`};
+    margin-top: ${props => props.isMobile ? `${40}px`: `${0}`};
     height: 500px;
     background-color: var(--bg);
 
