@@ -213,7 +213,7 @@ function App() {
         handleTodoFocus={handleTodoFocus}
         handleFinderFocus={handleFinderFocus}
         handleWeatherFocus={handleWeatherFocus}
-        handleSafariFocus={handleMapsFocus}
+        handleMapsFocus={handleMapsFocus}
         isMobile={isMobile}
         />
     </div>
