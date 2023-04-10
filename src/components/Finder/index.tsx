@@ -32,7 +32,7 @@ interface Props {
 }
 
 function Finder({display, zIndex, handleChangeDisplay, isMobile}: Props) {
-    const [content, setContent] = useState<string>('about')
+    const [content, setContent] = useState<string>('About')
 
   return (
     <S.Finder isMobile={isMobile} display={display} zIndex={zIndex}>
@@ -41,12 +41,12 @@ function Finder({display, zIndex, handleChangeDisplay, isMobile}: Props) {
             <img src={leftArrow} alt="" />
             <img src={rightArrow} alt="" />
         </div>
-        <p>About</p>
+        <p>{content}</p>
         <div>
             <img src={search} alt="" />
         </div>
-        <button onClick={() => setContent('about')}><img src={applicationIcon} alt="" />About</button>
-        <button onClick={() => setContent('work')}><img src={imagesIcon} alt="" />Work</button>
+        <button onClick={() => setContent('About')}><img src={applicationIcon} alt="" />About</button>
+        <button onClick={() => setContent('Work')}><img src={imagesIcon} alt="" />Work</button>
       </S.Header>
       <section>
         <S.FinderSidebar isMobile={isMobile}>
@@ -59,12 +59,12 @@ function Finder({display, zIndex, handleChangeDisplay, isMobile}: Props) {
                         <p >Favorites</p>
                     </header>
                     <ul >
-                        <li onClick={() => setContent('about')}><img src={applicationIcon} alt="" />About</li>
-                        <li onClick={() => setContent('work')}><img src={imagesIcon} alt="" />Work</li>
-                        <li onClick={() => setContent("downloads")}><img src={downloadsIcon} alt="" />Downloads</li>
-                        <li onClick={() => setContent("documents")}><img src={documentsIcon} alt="" />Documents</li>
-                        <li onClick={() => setContent("airdrop")}><img src={airdropIcon} alt="" />AirDrop</li>
-                        <li onClick={() => setContent("desktop")}><img src={desktopIcon} alt="" />Desktop</li>
+                        <li onClick={() => setContent('About')}><img src={applicationIcon} alt="" />About</li>
+                        <li onClick={() => setContent('Work')}><img src={imagesIcon} alt="" />Work</li>
+                        <li onClick={() => setContent("Downloads")}><img src={downloadsIcon} alt="" />Downloads</li>
+                        <li onClick={() => setContent("Documents")}><img src={documentsIcon} alt="" />Documents</li>
+                        <li onClick={() => setContent("Airdrop")}><img src={airdropIcon} alt="" />AirDrop</li>
+                        <li onClick={() => setContent("Desktop")}><img src={desktopIcon} alt="" />Desktop</li>
                     </ul>
                 </S.Favorites>
                 <S.Drive>
@@ -101,12 +101,12 @@ function Finder({display, zIndex, handleChangeDisplay, isMobile}: Props) {
 
 function showContent(value: string){
     switch(value){
-        case "about":
+        case "About":
             return (
                 <div>
                     <h1>Hey, are you looking for a front end Web-Developer?</h1>
                     <S.ProfileWrap>
-                        <img src={profileImg} alt="" />
+                        <img loading='lazy' src={profileImg} alt="" />
                         <div>
                             <p><strong>Markos Vinicius</strong></p>
                             <p>Web-developer from Brazil, based in Portugal</p>
@@ -153,7 +153,7 @@ function showContent(value: string){
                 </div>
             )
             break
-        case "work":
+        case "Work":
             return (
                 <S.Work>
                     <a href="https://markoscomk.github.io/TyperSpace/" target="_blank">
@@ -208,7 +208,7 @@ function showContent(value: string){
                 </S.Work>
             )
             break
-        case "downloads":
+        case "Downloads":
             return (
                 <S.Dowloads>
                     <ul>
@@ -217,21 +217,21 @@ function showContent(value: string){
                 </S.Dowloads>
             )
             break
-        case "documents":
+        case "Documents":
             return (
                 <S.Coming>
                     <h2>Coming soon</h2>
                 </S.Coming>
             )
             break
-        case "airdrop":
+        case "Airdrop":
             return (
                 <S.Coming>
                     <h2>Coming soon</h2>
                 </S.Coming>
             )
             break
-        case "desktop":
+        case "Desktop":
             return (
                 <S.Coming>
                     <h2>Coming soon</h2>
