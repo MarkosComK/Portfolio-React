@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import * as A from "../styles/animations"
 
 interface Props {
     display: boolean
@@ -7,6 +7,8 @@ interface Props {
 }
 
 export const Maps = styled.section<Props>`
+    animation: ${A.Screen} 0.5s ease;
+
     position: relative;
     display: ${props => props.display ? `grid` : `none`};
     z-index: ${props => props.zIndex};
