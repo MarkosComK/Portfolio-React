@@ -10,7 +10,7 @@ import Weather from "./components/Weather";
 import TopBar from "./components/TopBar";
 import StaticBG from './components/TopBar/backgrounds/background-main.jpg'
 import LoadingScreen from "./components/LoadingScreen";
-import Safari from "./components/Safari";
+import Maps from "./components/Maps";
 
 function verifyIsMobile() {
   const toMatch = [
@@ -51,7 +51,7 @@ function App() {
   const [todoDisplay, setTodoDisplay] = useState<boolean>(false)
   const [finderDisplay, setFinderDisplay] = useState<boolean>(false)
   const [weatherDisplay, setWeatherDisplay] = useState<boolean>(false)
-  const [safariDisplay, setSafariDisplay] = useState<boolean>(false)
+  const [mapsDisplay, setMapsDisplay] = useState<boolean>(false)
   const windowSize = useRef([window.innerWidth, window.innerHeight])
   
   // change Background
@@ -73,7 +73,7 @@ function App() {
   const [todoIndex, setTodoIndex] = useState<number>(0)
   const [finderIndex, setFinderIndex] = useState<number>(0)
   const [weatherIndex, setWeatherIndex] = useState<number>(0)
-  const [safariIndex, setSafariIndex] = useState<number>(0)
+  const [mapsIndex, setMapsIndex] = useState<number>(0)
   const [zIndex, setZindex] = useState<number>(1)
   
   const handleCalculatorFocus = () => {
@@ -92,8 +92,8 @@ function App() {
     setWeatherIndex(zIndex)
     setZindex(zIndex + 1)
   }
-  const handleSafariFocus = () => {
-    setSafariIndex(zIndex)
+  const handleMapsFocus = () => {
+    setMapsIndex(zIndex)
     setZindex(zIndex + 1)
   }
 
@@ -113,7 +113,7 @@ function App() {
         weatherDisplay ? setWeatherDisplay(false) : setWeatherDisplay(true)
         break
       case 5:
-        safariDisplay ? setSafariDisplay(false) : setSafariDisplay(true)
+        mapsDisplay ? setMapsDisplay(false) : setMapsDisplay(true)
         break
     }
   }
@@ -199,10 +199,10 @@ function App() {
           height={height}
           setWidth={setFinderWidth}
           setHeight={setHeight}
-          handleFocus={handleSafariFocus}
-          zIndex={safariIndex}
+          handleFocus={handleMapsFocus}
+          zIndex={mapsIndex}
           children={
-          <Safari isMobile={isMobile} display={safariDisplay} zIndex={safariIndex} handleChangeDisplay={handleChangeDisplay}/>
+          <Maps isMobile={isMobile} display={mapsDisplay} zIndex={mapsIndex} handleChangeDisplay={handleChangeDisplay}/>
           }
           />
         </main>
@@ -213,7 +213,7 @@ function App() {
         handleTodoFocus={handleTodoFocus}
         handleFinderFocus={handleFinderFocus}
         handleWeatherFocus={handleWeatherFocus}
-        handleSafariFocus={handleSafariFocus}
+        handleSafariFocus={handleMapsFocus}
         isMobile={isMobile}
         />
     </div>

@@ -28,6 +28,7 @@ export default createGlobalStyle`
 
     :root {
         --font-color: #f9fafb;
+        --bg: #1E1E1E;
         --theme-bg-color: rgba(16, 18, 27, 0.4);
         --border-color: rgba(113, 119, 144, 0.25);
         --theme-color: #f9fafb;
