@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 interface Props {
     display: boolean
     zIndex: number
@@ -27,9 +28,10 @@ export const Header = styled.header<HProps>`
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-    width: ${props => props.isMobile ? `${100}%`: `${800}px`};
+    width: ${props => props.isMobile ? `${100}%`: `${900}px`};
     left: ${props => props.isMobile ? `${0}`: `${0}px`};
     height: 49px;
+
     input{
         position: relative;
         z-index: 1000;
