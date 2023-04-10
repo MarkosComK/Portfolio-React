@@ -80,7 +80,7 @@ function TopBar({handleBgChange}: Props) {
             <div onMouseLeave={handleChangeDisplay}>
                 <a target='_blank' href='https://www.linkedin.com/in/markos-soares/'>Linkedin</a>
                 <a target='_blank' href='https://github.com/MarkosComK'>Github</a>
-                <a target='_blank' href='https://www.instagram.com/markoscomk/?hl=en'>Instagram</a>
+                <a target='_blank' href='https://www.instagram.com/markoscomk/'>Instagram</a>
             </div>
             <li>
                 <img src={batteryIcon} title="100%" />
