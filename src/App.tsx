@@ -11,6 +11,7 @@ import TopBar from "./components/TopBar";
 import StaticBG from './components/TopBar/backgrounds/background-main.jpg'
 import LoadingScreen from "./components/LoadingScreen";
 import Maps from "./components/Maps";
+import Presentation from "./components/Presentation";
 
 function verifyIsMobile() {
   const toMatch = [
@@ -128,7 +129,8 @@ function App() {
   
   return (
     <div onLoad={() => setIsMobile(verifyIsMobile())}>
-      <LoadingScreen display={loading}/> 
+      <LoadingScreen display={false}/> 
+      <Presentation/>
         <VideoBackground isMobile={isMobile} display={videoDisplay} background={background}/>
       <GlobalStyle />
         <header>
