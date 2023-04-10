@@ -7,14 +7,13 @@ interface Props {
 
 export const Maps = styled.section<Props>`
     position: relative;
-    display: ${props => props.display ? `flex` : `none`};
+    display: ${props => props.display ? `grid` : `none`};
     z-index: ${props => props.zIndex};
     border-radius: 14px;
     width: 900px;
     height: 500px;
     background-color: var(--bg);
 
-    display: grid;
     grid-template-rows: 1fr calc(100% - 50px) 1fr;
 `
 
