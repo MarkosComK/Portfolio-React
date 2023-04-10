@@ -22,11 +22,15 @@ const fadeAnimation = keyframes`
   to { opacity: 1; }
 `;
 
-export const Presentation = styled.div`
+interface Props {
+    display: boolean
+}
+
+export const Presentation = styled.div<Props>`
     width: 100%;
     height: 100vh;
 
-    display: flex;
+    display: ${props => props.display ? `flex` : `none`};
     justify-content: center;
     align-items: center;
     flex-direction: column;

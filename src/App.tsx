@@ -41,11 +41,15 @@ function getRandomArbitrary(min: number, max: number) {
 function App() {
   // state for loading screen
   const [loading, setLoading] = useState(false)
+  const [message, setMessage] = useState(false)
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
     }, 6000)
+    setTimeout(() => {
+      setMessage(true)
+    }, 8000)
   }, [])
   // set the Apps display for true or false
   const [calculatorDisplay, setCalculatorDisplay] = useState<boolean>(false)
@@ -129,8 +133,8 @@ function App() {
   
   return (
     <div onLoad={() => setIsMobile(verifyIsMobile())}>
-      <LoadingScreen display={false}/> 
-      <Presentation/>
+      <LoadingScreen display={loading}/> 
+      <Presentation display={false}/>
         <VideoBackground isMobile={isMobile} display={videoDisplay} background={background}/>
       <GlobalStyle />
         <header>
