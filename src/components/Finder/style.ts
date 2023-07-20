@@ -196,8 +196,11 @@ export const FolderSize = styled.div`
         }
     }
 `
+interface Finder {
+    isMobile: boolean
+}
 
-export const FinderMain = styled.main`
+export const FinderMain = styled.main<Finder>`
     width: 100%;
     overflow: auto;
     padding: 20px;
@@ -205,16 +208,19 @@ export const FinderMain = styled.main`
     margin-top: 50px;
     &::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        display: ${props => props.isMobile ? "none" : "auto"};
         border-radius: 10px;
         background-color: rgba(30, 30, 30, 0);
     }
 
     &::-webkit-scrollbar {
+        display: ${props => props.isMobile ? "none" : "auto"};
         width: 12px;
         background-color: rgba(30, 30, 30, 0);
     }
 
     &::-webkit-scrollbar-thumb {
+        display: ${props => props.isMobile ? "none" : "auto"};
         border-radius: 10px;
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         background-color: #313131;
