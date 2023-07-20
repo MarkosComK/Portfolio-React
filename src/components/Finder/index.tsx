@@ -136,7 +136,7 @@ function showContent(value: string){
                                 Everything happens for a reason. 
                             </p>
                             <p>
-                                What is yours for being here?
+                                What is your to be here?
                             </p>
                         </div>
                         <S.Icons>
