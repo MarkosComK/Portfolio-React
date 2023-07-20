@@ -138,7 +138,7 @@ function App() {
         <VideoBackground isMobile={isMobile} display={videoDisplay} background={background}/>
       <GlobalStyle />
         <header>
-          <TopBar handleBgChange={handleBgChange}/>
+          <TopBar handleBgChange={handleBgChange} isMobile={isMobile}/>
         </header>
         <main>
           <MoveWindow

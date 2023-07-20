@@ -17,10 +17,11 @@ import bgRedFS from './backgrounds/background-red.jpg'
 import bgMainFS from './backgrounds/background-main.jpg'
 
 interface Props {
-    handleBgChange: (value: string) => void
+    handleBgChange: (value: string) => void,
+    isMobile: boolean
 }
 
-function TopBar({handleBgChange}: Props) {
+function TopBar({handleBgChange, isMobile}: Props) {
     const date = new Date
     const [ hours, setHours ] = useState(date.getHours())
     const [ minutes, setMinutes ] = useState(date.getMinutes())
@@ -55,7 +56,7 @@ function TopBar({handleBgChange}: Props) {
     }
 
   return (
-    <S.TopBar display={dropDisplay} settingsDisplay={settingsDisplay}>
+    <S.TopBar display={dropDisplay} settingsDisplay={settingsDisplay} isMobile={isMobile}>
         <ul>
             <li><S.kIcon src={kIcon} alt="" /></li>
             <li onClick={handleSettingsDisplay}>Settings

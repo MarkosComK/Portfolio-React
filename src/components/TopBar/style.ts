@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 interface Props {
     display: boolean,
-    settingsDisplay: boolean
+    settingsDisplay: boolean,
+    isMobile: boolean
 }
 
 export const TopBar = styled.nav<Props>`
-    display: flex;
+    display: ${props => props.isMobile ? "none" : "flex"};
     justify-content: space-between;
     position: absolute;
     top: 10px;
