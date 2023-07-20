@@ -12,6 +12,7 @@ import StaticBG from './components/TopBar/backgrounds/background-main.jpg'
 import LoadingScreen from "./components/LoadingScreen";
 import Maps from "./components/Maps";
 import Presentation from "./components/Presentation";
+import Notch from "./components/notch";
 
 function verifyIsMobile() {
   const toMatch = [
@@ -139,6 +140,7 @@ function App() {
       <GlobalStyle />
         <header>
           <TopBar handleBgChange={handleBgChange} isMobile={isMobile}/>
+          <Notch isMobile={isMobile}/>
         </header>
         <main>
           <MoveWindow
