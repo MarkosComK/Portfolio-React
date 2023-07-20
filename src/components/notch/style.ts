@@ -22,8 +22,18 @@ export const Notch = styled.div`
     background-color: #000;
 
     border-radius: 32px;
+    z-index: 100;
 `
 
 export const Hours = styled.div`
     font-size: 14px;
+    position: absolute;
+    left: 27px;
+    z-index: 100;
+`
+
+export const Icon = styled.img`
+    position: absolute;
+    right: 27px;
+    z-index: 100;
 `

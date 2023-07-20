@@ -17,14 +17,14 @@ export const Finder = styled.div<Props>`
     animation: ${A.Screen} 0.5s ease;
     display: ${props => props.display ? "flex" : "none"};
     position: absolute;
-    border: 1px solid rgb(54, 54, 54);
+    border: ${props => props.isMobile ? "none" : `${1}px solid rgb(${54}, ${54}, ${54})`};
     width: 900px;
     width: ${props => props.isMobile ? `${100}vw`: `${900}px`};
-    height: ${props => props.isMobile ? `${70}vh`: `${500}px`};
+    height: ${props => props.isMobile ? `${100}vh`: `${500}px`};
     background: #1E1E1E;
-    border-radius: 10px;
+    border-radius: ${props => props.isMobile ? "none" : `${10}px`};
     z-index: ${props => props.zIndex};
-    margin-top: ${props => props.isMobile ? `${40}px`: `${0}`};
+    margin-top: ${props => props.isMobile ? `${0}px`: `${0}`};
     section{
         div:nth-child(2){ /**select the div below <S.FinderButtons> */
             display: flex;
@@ -40,6 +40,9 @@ interface HProps{
 
 export const Header = styled.header<HProps>`
     position: absolute;
+    bottom: ${props => props.isMobile ? `${0}`: " "};
+    bottom: 100px;
+
     display: flex;
     align-items: center;
     justify-content: ${props => props.isMobile ? `space-around`: `space-between`};

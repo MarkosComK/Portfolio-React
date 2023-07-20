@@ -34,7 +34,7 @@ function Notch({isMobile}: Props) {
         <S.Hours>{hours < 10 ? `0${hours}` : hours} : {minutes < 10 ? `0${minutes}` : minutes}</S.Hours>
         <S.Notch>
         </S.Notch>
-        <img src={batteryIcon} title="100%" />
+        <S.Icon src={batteryIcon} title="100%" />
     </S.TopBar>
   )
 }
