@@ -71,6 +71,10 @@ export const MobileButton = styled.button<Props>`
     width: 50px;
     height: 50px;
 
-    background-color: #000;
+    background-color: var(--theme-bg-color);
+    box-shadow: 0 4px 30px var(--border-color);
+    backdrop-filter: blur(12.4px);
+    -webkit-backdrop-filter: blur(12.4px);
+    border: 1px solid var(--border-color);
     border-radius: 50%;
 `
