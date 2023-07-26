@@ -48,7 +48,7 @@ export const Header = styled.header<HProps>`
     justify-content: ${props => props.isMobile ? `space-around`: `space-between`};
     width: ${props => props.isMobile ? `${100}%`: `${750}px`};
     left: ${props => props.isMobile ? `${0}`: `${150}px`};
-    height: 49px;
+    height: ${props => props.isMobile ? `${70}px`: `${49}px`};
     z-index: 1;
     p{
         display: ${props => props.isMobile ? "none" : "inline"};
