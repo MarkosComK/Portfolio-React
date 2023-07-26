@@ -15,11 +15,11 @@ export const Calculator = styled.div<Props>`
     background-color: var(--theme-bg-color);
 
 
-    height: ${props => props.isMobile ? `${48}vh`: `${400}px`};
+    height: ${props => props.isMobile ? `${100}%`: `${400}px`};
     width: ${props => props.isMobile ? `${100}vw`: `${270}px`};
-    border-radius: 14px;
+    border-radius: ${props => props.isMobile ? `${0}px` : `${14}px`};
     z-index: ${props => props.zIndex};
-    margin-top: ${props => props.isMobile ? `${40}px`: 0};
+    padding-top: ${props => props.isMobile ? `${60}px`: `${0}`};
 
     /* Glass effect */
     backdrop-filter: blur(20px);
@@ -44,6 +44,7 @@ export const Header = styled.header`
 
 
 export const Calculus = styled.section`
+    border: 1px solid red;
     margin-top: 2rem;
 	width: 100%;
 	height: 5rem;
