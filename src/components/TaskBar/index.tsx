@@ -4,6 +4,7 @@ import finderIcon from "../assets/finder-icon.png"
 import mapsIcon from "../assets/maps-icon.png"
 import calculatorIcon from "../assets/calculator-icon.png"
 import cameraIcon from "../assets/camera-icon.png"
+import arrowLeft from "./images/left-arrow.png"
 import mailIcon from "../assets/mail-icon.png"
 import todoIcon from "../assets/todo-icon.png"
 import weatherIcon from "../assets/weather-icon.png"
@@ -71,7 +72,9 @@ function TaskBar({handleChangeDisplay, handleCalculatorFocus, handleTodoFocus, h
 
     return(
         <S.Nav isMobile={isMobile} hideBar={hideBar}>
-          <S.MobileButton isMobile={isMobile} hideBar={hideBar} onClick={handleBar}></S.MobileButton>
+          <S.MobileButton isMobile={isMobile} hideBar={hideBar} onClick={handleBar}>
+            <img src={arrowLeft} alt="" />
+          </S.MobileButton>
             <ul onMouseOver={() => setLoad(true)} onClick={handleBar}>
                 <li>
                   <img id="navbarIcon" 
