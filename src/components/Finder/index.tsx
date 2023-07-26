@@ -103,7 +103,7 @@ function showContent(value: string){
     switch(value){
         case "About":
             return (
-                <div>
+                <div >
                     <h1>Hey, are you looking for a front end Web-Developer?</h1>
                     <S.ProfileWrap>
                         <img loading='lazy' src={profileImg} alt="" />

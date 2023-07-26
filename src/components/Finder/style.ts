@@ -210,6 +210,9 @@ export const FinderMain = styled.main<FinderProps>`
     padding: 20px;
     text-align: center;
     margin-top: 56px;
+    div:nth-child(1){
+        padding-bottom: ${props => props.isMobile ? `${52}px` : `${0}`};
+    }
     &::-webkit-scrollbar-track {
         display: ${props => props.isMobile ? "none" : "auto"};
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -243,6 +246,7 @@ export const ProfileWrap = styled.div`
         border-radius: 50%;
     }
 `
+
 
 export const TextWrap = styled.div`
     animation: ${A.ShowContent} 3s ease;
