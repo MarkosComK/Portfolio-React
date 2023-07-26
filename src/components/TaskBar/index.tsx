@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Nav } from "./style"
+import * as S from "./style"
 import finderIcon from "../assets/finder-icon.png"
 import mapsIcon from "../assets/maps-icon.png"
 import calculatorIcon from "../assets/calculator-icon.png"
@@ -21,6 +21,13 @@ interface Props {
 
 function TaskBar({handleChangeDisplay, handleCalculatorFocus, handleTodoFocus, handleFinderFocus, handleWeatherFocus, handleMapsFocus, isMobile}: Props){
     const [load, setLoad] = useState(false)
+    const [hideBar, setHideBar] = useState(false)
+
+    const handleBar = () => {
+      if(isMobile){
+        setHideBar(!hideBar)
+      }
+    }
 
     if(!isMobile){
       // create an array with the taskbar elements
@@ -63,8 +70,9 @@ function TaskBar({handleChangeDisplay, handleCalculatorFocus, handleTodoFocus, h
 
 
     return(
-        <Nav isMobile={isMobile}>
-            <ul onMouseOver={() => setLoad(true)}>
+        <S.Nav isMobile={isMobile} hideBar={hideBar}>
+          <S.MobileButton isMobile={isMobile} hideBar={hideBar} onClick={handleBar}></S.MobileButton>
+            <ul onMouseOver={() => setLoad(true)} onClick={handleBar}>
                 <li>
                   <img id="navbarIcon" 
                   src={finderIcon} alt="" 
@@ -101,7 +109,7 @@ function TaskBar({handleChangeDisplay, handleCalculatorFocus, handleTodoFocus, h
                    <a href="mailto: markoscomks@gmail.com"><img id="navbarIcon" src={mailIcon} alt="" /></a> 
                 </li>
             </ul>
-        </Nav>
+        </S.Nav>
     )
 }
 

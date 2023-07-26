@@ -41,7 +41,7 @@ interface HProps{
 export const Header = styled.header<HProps>`
     position: absolute;
     bottom: ${props => props.isMobile ? `${0}`: " "};
-    bottom: 100px;
+    background-color: ${props => props.isMobile ? `#1E1E1E`: "none"};
 
     display: flex;
     align-items: center;
@@ -200,13 +200,18 @@ interface Finder {
     isMobile: boolean
 }
 
-export const FinderMain = styled.main<Finder>`
+interface FinderProps {
+    isMobile: boolean
+}
+
+export const FinderMain = styled.main<FinderProps>`
     width: 100%;
     overflow: auto;
     padding: 20px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 56px;
     &::-webkit-scrollbar-track {
+        display: ${props => props.isMobile ? "none" : "auto"};
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         display: ${props => props.isMobile ? "none" : "auto"};
         border-radius: 10px;

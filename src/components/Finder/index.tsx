@@ -88,7 +88,7 @@ function Finder({display, zIndex, handleChangeDisplay, isMobile}: Props) {
             </div>
         </S.FinderSidebar>
       </section>
-      <S.FinderMain isMobile={isMobile} >
+      <S.FinderMain isMobile={isMobile}>
         <section>
             {/* this section should receive the content dynamically it`s in progress*/}
             {showContent(content)}

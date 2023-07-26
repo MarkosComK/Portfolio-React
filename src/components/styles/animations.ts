@@ -28,3 +28,12 @@ export const ScreenOut = keyframes`
         transform: scale(0);
     }
 `
+
+export const TaskBar = keyframes`
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+`
