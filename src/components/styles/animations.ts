@@ -29,11 +29,14 @@ export const ScreenOut = keyframes`
     }
 `
 
-export const TaskBar = keyframes`
+export const button = keyframes`
     0%{
-        transform: translateY(0%);
+        opacity: 0;;
+    }
+    50%{
+        opacity: 0;;
     }
     100%{
-        transform: translateY(-100%);
+        opacity: 1;
     }
 `

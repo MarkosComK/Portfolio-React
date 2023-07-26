@@ -7,19 +7,20 @@ interface Props {
 }
 
 export const Nav = styled.nav<Props>`
+    transition: 0.5s ease;
+
     position: absolute;
     bottom: 10px;
     z-index: 1000;
 
     margin: 0 50%;
-    transform: ${props => props.hideBar ? `translate(-${50}%, ${100}%)` : `translate(-${50}%)`};
+    transform: ${props => props.hideBar ? `translate(-${50}%, ${110}%)` : `translate(-${50}%)`};
     background: var(--theme-bg-color);
     border-radius: 16px;
     box-shadow: 0 4px 30px var(--border-color);
     backdrop-filter: blur(12.4px);
     -webkit-backdrop-filter: blur(12.4px);
     border: 1px solid var(--border-color);
-    animation: ${A.TaskBar} 0.5s ease;
 
     ul{
         display: flex;
@@ -63,7 +64,7 @@ export const Nav = styled.nav<Props>`
 `
 
 export const MobileButton = styled.button<Props>`
-    display: none;
+    animation: ${A.button} 0.5s ease;
     display: ${props => props.hideBar ? "block" : "none"};
     position: absolute;
     left: 50%;
