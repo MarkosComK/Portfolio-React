@@ -14,7 +14,7 @@ export const Nav = styled.nav<Props>`
     z-index: 1000;
 
     margin: 0 50%;
-    transform: ${props => props.hideBar ? `translate(-${50}%, ${110}%)` : `translate(-${50}%)`};
+    transform: ${props => props.hideBar ? `translate(-${50}%, ${130}%)` : `translate(-${50}%)`};
     background: var(--theme-bg-color);
     border-radius: 16px;
     box-shadow: 0 4px 30px var(--border-color);
@@ -68,7 +68,7 @@ export const MobileButton = styled.button<Props>`
     display: ${props => props.hideBar ? "block" : "none"};
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -120%);
+    transform: translate(-50%, -140%);
     width: 50px;
     height: 50px;
 
