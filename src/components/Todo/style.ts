@@ -106,7 +106,7 @@ export const Todo = styled.div<Props>`
     }
     @media (max-width: 1023px) {
         border-radius: 0;
-        height: 100vh;
+        height: calc(100vh - 100px);
         margin-top: 0;
         padding-top: 50px;
         section{
