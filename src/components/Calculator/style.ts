@@ -30,6 +30,9 @@ export const Calculator = styled.div<Props>`
     section:nth-child(2){ /* select the screen (S.Calculus) */
         height: ${props => props.isMobile ? `${90}px`: `${79}px`};
     }
+    @media (max-width: 1023px) {
+        padding-bottom: 60px;
+    }
 `
 export const Header = styled.header`
     display: flex;
