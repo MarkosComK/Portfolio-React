@@ -22,7 +22,7 @@ export const Maps = styled.section<Props>`
     grid-template-rows: 1fr calc(100% - 50px) 1fr;
     @media (max-width: 1023px) {
         border-radius: 0;
-        height: 100vh;
+        height: calc(100vh - 100px);
         margin-top: 0;
         padding-top: 50px;
     }
