@@ -20,6 +20,12 @@ export const Maps = styled.section<Props>`
     background-color: var(--bg);
 
     grid-template-rows: 1fr calc(100% - 50px) 1fr;
+    @media (max-width: 1023px) {
+        border-radius: 0;
+        height: 100vh;
+        margin-top: 0;
+        padding-top: 50px;
+    }
 `
 
 interface HProps {
@@ -55,6 +61,11 @@ export const Main = styled.main`
         height: 100%;
         border: none;
         border-radius: 0 0 14px 14px;
+    }
+    @media (max-width: 1023px) {
+        iframe{
+            border-radius: 0;
+        }
     }
 `
 
