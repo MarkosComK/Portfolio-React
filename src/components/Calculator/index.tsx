@@ -108,7 +108,7 @@ function Calculator({display, zIndex, handleChangeDisplay, isMobile}: Props){
                     <B.RButton onClick={() => handleChangeDisplay(1)}></B.RButton>
                 </div>
             </S.Header>
-            <S.Calculus>
+            <S.Calculus isMobile={isMobile}>
                 <div>{displayValue()}</div>
                 <p>{operation}</p> 
             </S.Calculus>

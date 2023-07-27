@@ -28,7 +28,7 @@ export const Calculator = styled.div<Props>`
         display: ${props => props.isMobile ? `none`: "flex"};
     }
     section:nth-child(2){ /* select the screen (S.Calculus) */
-        height: ${props => props.isMobile ? `${112}px`: `${79}px`};
+        height: ${props => props.isMobile ? `${90}px`: `${79}px`};
     }
 `
 export const Header = styled.header`
@@ -42,14 +42,16 @@ export const Header = styled.header`
     white-space: nowrap;
 `
 
+interface CalcProps {
+    isMobile: boolean
+}
 
-export const Calculus = styled.section`
-    border: 1px solid red;
-    margin-top: 2rem;
+export const Calculus = styled.section<CalcProps>`
+    margin-top: ${props => props.isMobile ? `${0}` : `${2}rem`};
 	width: 100%;
 	height: 5rem;
     div{
-        margin: 0;
+        margin-top: 10px;
         padding-right: 1.5rem;
         color: white;
         font-size: 5rem;
@@ -72,8 +74,8 @@ export const Buttons = styled.section<BProps>`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2px;
-    height: ${props => props.isMobile ? `${100}%`: `${250}px`};
-    border-radius: 0 0 14px 14px;
+    height: ${props => props.isMobile ? `${80}%`: `${250}px`};
+    border-radius: ${props => props.isMobile ? `${0} ${0} ${0} ${0}`: `${0} ${0} ${14}pxx ${14}px`};
     color: var(--font-color);
     button{
         background-color: #626065;
