@@ -106,6 +106,13 @@ function App() {
 
   function handleChangeDisplay(value: number) {
     switch(value){
+      case 0:
+        setCalculatorDisplay(false)
+        setTodoDisplay(false)
+        setFinderDisplay(false)
+        setWeatherDisplay(false)
+        setMapsDisplay(false)
+        break
       case 1:
         calculatorDisplay ? setCalculatorDisplay(false) : setCalculatorDisplay(true)
         break

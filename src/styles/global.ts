@@ -26,6 +26,11 @@ export default createGlobalStyle`
         color: var(--font-color);
     }
 
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
     :root {
         --font-color: #f9fafb;
         --bg: #1E1E1E;

@@ -72,7 +72,8 @@ function TaskBar({handleChangeDisplay, handleCalculatorFocus, handleTodoFocus, h
 
     return(
         <S.Nav isMobile={isMobile} hideBar={hideBar}>
-          <S.MobileButton isMobile={isMobile} hideBar={hideBar} onClick={handleBar}>
+          <S.MobileButton isMobile={isMobile} hideBar={hideBar} 
+          onClick={() => {handleBar(); handleChangeDisplay(0)}} >
             <img src={arrowLeft} alt="" />
           </S.MobileButton>
             <ul onMouseOver={() => setLoad(true)} onClick={handleBar}>

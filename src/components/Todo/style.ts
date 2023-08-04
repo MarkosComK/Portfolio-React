@@ -104,6 +104,39 @@ export const Todo = styled.div<Props>`
             right: 25px;
         }
     }
+    @media (max-width: 1023px) {
+        border-radius: 0;
+        height: calc(100vh - 100px);
+        margin-top: 0;
+        padding-top: 50px;
+        section{
+            li{
+                height: 60px;
+                div{
+                    button{
+                        width: 40px;
+                        height: 40px;
+                        &:nth-child(2){
+                            position: relative;
+                            top: -1px;
+                        }
+                    }
+                }
+
+            }
+        }
+        form{
+            input{
+                bottom: 88px;
+                height: 60px;
+            }
+            button{
+            position: absolute;
+            right: 25px;
+            bottom: 88px;
+        }
+        }
+    }
 `
 
 interface HProps {

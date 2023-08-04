@@ -35,19 +35,19 @@ export const Nav = styled.nav<Props>`
             justify-content: center;
             align-items: center;
 
-            width: 60px;
-            height: 60px;
+            width: 52px;
+            height: 52px;
             transition: 0.2s;
             img{
-                width: 60px;
+                width: 58gitpx;
                 transition: 0.2s;
             }
             a{
                 height: 60px;
             }
             &:hover{
-                margin-left: ${props => props.isMobile ? `${0}px` : `${10}px`};
-                margin-right: ${props => props.isMobile ? `${0}px` : `${10}px`};
+                margin-left: ${props => props.isMobile ? `${0}px` : `${20}px`};
+                margin-right: ${props => props.isMobile ? `${0}px` : `${20}px`};
                 cursor: pointer;
             }
         }
