@@ -39,7 +39,7 @@ export const Nav = styled.nav<Props>`
             height: 52px;
             transition: 0.2s;
             img{
-                width: 58gitpx;
+                width: 58px;
                 transition: 0.2s;
             }
             a{
