@@ -20,7 +20,7 @@ export const Nav = styled.nav<Props>`
     box-shadow: 0 4px 30px var(--border-color);
     backdrop-filter: blur(12.4px);
     -webkit-backdrop-filter: blur(12.4px);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);;
 
     ul{
         display: flex;
